@@ -1,3 +1,10 @@
+/* Make sure root fills the whole screen */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+
+}
+
 .calculator {
   width: 220px;
   margin: 50px auto;
@@ -5,6 +12,8 @@
   padding: 10px;
   border-radius: 8px;
   background: #f8f8f8;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
 }
 
 .display {
@@ -35,3 +44,10 @@ button {
 button:hover {
   background: #bbb;
 }
+.p{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+

@@ -7,10 +7,12 @@ function App() {
   const [display, setDisplay] = useState("0");
   const [firstValue, setFirstValue] = useState<number | null>(null);
   const [operator, setOperator] = useState<string | null>(null);
+  const [waitingForSecond, setWaitingForSecond] = useState(false);
 
   const handleNumber = (num: string) => {
-    if (display === "0") {
+    if (display === "0" || waitingForSecond) {
       setDisplay(num);
+      setWaitingForSecond(false);
     } else {
       setDisplay(display + num);
     }
@@ -19,11 +21,13 @@ function App() {
   const handleOperator = (op: string) => {
     setFirstValue(parseFloat(display));
     setOperator(op);
-    setDisplay("0");
+    setWaitingForSecond(true);
   };
 
   const handleEquals = () => {
     if (firstValue === null || operator === null) return;
+    if (waitingForSecond) return;
+
     const secondValue = parseFloat(display);
     let result = 0;
 
@@ -43,14 +47,16 @@ function App() {
     }
 
     setDisplay(result.toString());
-    setFirstValue(null);
+    setFirstValue(result);
     setOperator(null);
+    setWaitingForSecond(true);
   };
 
   const handleClear = () => {
     setDisplay("0");
     setFirstValue(null);
     setOperator(null);
+    setWaitingForSecond(false);
   };
 
   return (
@@ -63,8 +69,7 @@ function App() {
         <Button label="2" onClick={() => handleNumber("2")} />
         <Button label="3" onClick={() => handleNumber("3")} />
         <Button label="+" onClick={() => handleOperator("+")} />
-      
-      
+
         {/* Row 2 */}
         <Button label="4" onClick={() => handleNumber("4")} />
         <Button label="5" onClick={() => handleNumber("5")} />
@@ -83,7 +88,11 @@ function App() {
         <Button label="=" onClick={handleEquals} />
         <Button label="÷" onClick={() => handleOperator("/")} />
       </div>
-      
+    <div>
+    <p>You put two numbers and get the result.</p>
+    <p>The answer could also be used as the first number for the next calculation.</p>
+    </div>
+
     </div>
   );
 }
