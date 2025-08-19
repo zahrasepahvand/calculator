@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+.calculator {
+  width: 200px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.display {
+  background: #eee;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.buttons button {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
