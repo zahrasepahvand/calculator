@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: 📥 Install dependencies using npm ci
-        run: npm ci
+      - name: 📥 Install dependencies (Force installation)
+        run: npm install --legacy-peer-deps  # Or you can use --force
 
       - name: 🏗️ Build the project
         run: npm run build
