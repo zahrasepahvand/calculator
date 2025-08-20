@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Display from "./components/Display";
-import Button from "./components/Button";
+import { Button } from "semantic-ui-react";
 
 function App() {
   const [display, setDisplay] = useState("0");
@@ -60,41 +60,42 @@ function App() {
   };
 
   return (
-    <><div className="calculator">
-      <Display value={display} />
+    <>
+      <div className="calculator">
+        <Display value={display} />
 
-      <div className="buttons">
-        {/* Row 1 */}
-        <Button label="1" onClick={() => handleNumber("1")} />
-        <Button label="2" onClick={() => handleNumber("2")} />
-        <Button label="3" onClick={() => handleNumber("3")} />
-        <Button label="+" onClick={() => handleOperator("+")} />
+        <div className="buttons">
+          {/* Row 1 */}
+          <Button size="small" onClick={() => handleNumber("1")}>1</Button>
+          <Button size="small" onClick={() => handleNumber("2")}>2</Button>
+          <Button size="small" onClick={() => handleNumber("3")}>3</Button>
+          <Button size="small" onClick={() => handleOperator("+")}>+</Button>
 
-        {/* Row 2 */}
-        <Button label="4" onClick={() => handleNumber("4")} />
-        <Button label="5" onClick={() => handleNumber("5")} />
-        <Button label="6" onClick={() => handleNumber("6")} />
-        <Button label="-" onClick={() => handleOperator("-")} />
+          {/* Row 2 */}
+          <Button size="small" onClick={() => handleNumber("4")}>4</Button>
+          <Button size="small" onClick={() => handleNumber("5")}>5</Button>
+          <Button size="small" onClick={() => handleNumber("6")}>6</Button>
+          <Button size="small" onClick={() => handleOperator("-")}>-</Button>
 
-        {/* Row 3 */}
-        <Button label="7" onClick={() => handleNumber("7")} />
-        <Button label="8" onClick={() => handleNumber("8")} />
-        <Button label="9" onClick={() => handleNumber("9")} />
-        <Button label="x" onClick={() => handleOperator("*")} />
+          {/* Row 3 */}
+          <Button size="small" onClick={() => handleNumber("7")}>7</Button>
+          <Button size="small" onClick={() => handleNumber("8")}>8</Button>
+          <Button size="small" onClick={() => handleNumber("9")}>9</Button>
+          <Button size="small" onClick={() => handleOperator("*")}>x</Button>
 
-        {/* Row 4 */}
-        <Button label="C" onClick={handleClear} />
-        <Button label="0" onClick={() => handleNumber("0")} />
-        <Button label="=" onClick={handleEquals} />
-        <Button label="÷" onClick={() => handleOperator("/")} />
+          {/* Row 4 */}
+          <Button onClick={handleClear}>C</Button>
+          <Button size="small" onClick={() => handleNumber("0")}>0</Button>
+          <Button onClick={handleEquals}>=</Button>
+          <Button size="small" onClick={() => handleOperator("/")}>÷</Button>
+        </div>
       </div>
-    </div>
-    <div>
-      <p>You put two numbers and get the result.</p>
-      <p>The answer could also be used as the first number for the next calculation.</p>
-    </div>
-  </>
 
+      <div>
+        <p>You put two numbers and get the result.</p>
+        <p>The answer could also be used as the first number for the next calculation.</p>
+      </div>
+    </>
   );
 }
 
