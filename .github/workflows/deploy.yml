@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: 📥 Install dependencies
-        run: npm install
+      - name: 📥 Install dependencies using npm ci
+        run: npm ci
 
       - name: 🏗️ Build the project
         run: npm run build
