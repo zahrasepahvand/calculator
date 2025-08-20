@@ -60,7 +60,7 @@ function App() {
   };
 
   return (
-    <div className="calculator">
+    <><div className="calculator">
       <Display value={display} />
 
       <div className="buttons">
@@ -80,7 +80,7 @@ function App() {
         <Button label="7" onClick={() => handleNumber("7")} />
         <Button label="8" onClick={() => handleNumber("8")} />
         <Button label="9" onClick={() => handleNumber("9")} />
-        <Button label="*" onClick={() => handleOperator("*")} />
+        <Button label="x" onClick={() => handleOperator("*")} />
 
         {/* Row 4 */}
         <Button label="C" onClick={handleClear} />
@@ -88,12 +88,13 @@ function App() {
         <Button label="=" onClick={handleEquals} />
         <Button label="÷" onClick={() => handleOperator("/")} />
       </div>
+    </div>
     <div>
-    <p>You put two numbers and get the result.</p>
-    <p>The answer could also be used as the first number for the next calculation.</p>
+      <p>You put two numbers and get the result.</p>
+      <p>The answer could also be used as the first number for the next calculation.</p>
     </div>
+  </>
 
-    </div>
   );
 }
 
