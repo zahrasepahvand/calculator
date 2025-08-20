@@ -1,11 +1,19 @@
-# React + TypeScript + Vite
+# My Simple Calculator Web Application: React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is a simple online calculator that allows you to perform basic mathematical operations such as addition, subtraction, multiplication, and division. It is designed to be easy and fast to use.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+
+- Simple and clear user interface
+
+- Supports addition, subtraction, multiplication, and division
+
+- Responsive design for mobile and desktop
+
+- Smooth and fast user experience
+
+  
 
 ## Expanding the ESLint configuration
 
