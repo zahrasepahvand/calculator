@@ -42,9 +42,6 @@ Responsive design allows the user to easily use the calculator on mobile devices
 
 ## Tasks to Improve the Calculator
 
-Here are the **4 frontend tasks** to improve the calculator app using advanced React features:
-
----
 
 ### 1. Implement Global State with React Context
 
@@ -60,11 +57,6 @@ Here are the **4 frontend tasks** to improve the calculator app using advanced R
 
 **Goal**: Allow users to switch between different calculator features or modes, providing a better and more organized user experience.
 
-**Example Routes**:
-
-* `/basic`
-* `/scientific`
-* `/history`
 
 ---
 
@@ -122,12 +114,7 @@ The app will be available at `http://localhost:3000`.
 
 ## Contributing
 
-If you'd like to contribute to this project, feel free to fork the repository, make changes, and create a pull request. Contributions are always welcome!
+If you'd like to contribute to this project, feel free to fork the repository, make changes, and create a pull request. Contributions are always welcome! :)
 
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
