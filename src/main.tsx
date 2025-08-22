@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import 'semantic-ui-css/semantic.min.css';
 
+
 createRoot(document.getElementById('Root')!).render(
   <StrictMode>
     <App />
