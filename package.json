@@ -1,9 +1,21 @@
 {
     "scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-  "build": "tsc -b && vite build",
-  "lint": "eslint .",
-  "preview": "vite preview"
-}
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "dev": "vite"
+    },
+    "dependencies": {
+        "react-scripts": "^0.0.0",
+        "semantic-ui-css": "^2.5.0",
+        "semantic-ui-react": "^2.1.5"
+    },
+    "devDependencies": {
+        "@types/react": "^19.1.10",
+        "@types/react-dom": "^19.1.7",
+        "@vitejs/plugin-react": "^5.0.1",
+        "vite": "^7.1.3"
+    }
 }

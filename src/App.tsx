@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import './App.css';
 import Display from "./components/Display";
 import { Button } from "semantic-ui-react";
 
